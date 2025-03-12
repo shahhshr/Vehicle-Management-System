@@ -1,0 +1,15 @@
+# Ignore Eclipse-specific files
+.classpath
+.project
+.settings/
+
+# Ignore compiled Java files
+bin/
+
+# Ignore dependency libraries (optional)
+lib/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+

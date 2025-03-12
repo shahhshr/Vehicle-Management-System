@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+    "/Users/poorvapatel/Desktop/EorkSpace1/HibernateWeek6/src/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@calvin.humber.ca:1521:grok</property>
+        <property name="hibernate.connection.username">n01710904</property>
+        <property name="hibernate.connection.password">oracle</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="com.com.zodiacgroup.model.Customer"/>
+    </session-factory>
+</hibernate-configuration>
