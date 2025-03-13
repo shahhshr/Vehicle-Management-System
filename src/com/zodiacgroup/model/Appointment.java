@@ -12,7 +12,7 @@ public class Appointment {
     private int id;
 
     @Column(name = "appointment_id", unique = true, nullable = false)
-    private String appointmentId;  // New field for appointment ID
+    private String appointmentId;  
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)  // Foreign key reference to Customer
