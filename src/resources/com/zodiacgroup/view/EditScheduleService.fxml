@@ -103,7 +103,7 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="421.0" layoutY="320.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancle" textFill="WHITE">
+      <Button layoutX="421.0" layoutY="320.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancel" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
