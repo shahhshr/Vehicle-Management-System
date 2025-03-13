@@ -41,6 +41,6 @@ public class EditScheduleServiceController {
 
     @FXML
     private void initialize() {
-        // Initialize logic if needed
+        
     }
 }
