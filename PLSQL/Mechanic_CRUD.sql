@@ -1,46 +1,38 @@
--- mechanic_crud_proc.sql: PL/SQL procedures for Mechanic CRUD operations
-CREATE OR REPLACE PROCEDURE AddMechanic(
-    p_name IN VARCHAR2,
-    p_email IN VARCHAR2,
-    p_phone IN VARCHAR2,
-    p_specialty IN VARCHAR2,
-    p_experience IN NUMBER
+-- mechanic_table.sql - Create Mechanic Table
+CREATE TABLE Mechanic (
+    mechanic_id NUMBER PRIMARY KEY,
+    name VARCHAR2(100) NOT NULL,
+    phone VARCHAR2(15) NOT NULL,
+    email VARCHAR2(100) UNIQUE NOT NULL,
+    expertise VARCHAR2(255) NOT NULL
+);
+-- mechanic_crud_proc.sql - Mechanic CRUD Operations
+CREATE OR REPLACE PROCEDURE add_mechanic (
+    p_name IN Mechanic.name%TYPE,
+    p_phone IN Mechanic.phone%TYPE,
+    p_email IN Mechanic.email%TYPE,
+    p_expertise IN Mechanic.expertise%TYPE
 ) AS
 BEGIN
-    INSERT INTO Mechanic (name, email, phone, specialty, experience)
-    VALUES (p_name, p_email, p_phone, p_specialty, p_experience);
-    COMMIT;
-END AddMechanic;
+    INSERT INTO Mechanic (mechanic_id, name, phone, email, expertise)
+    VALUES (mechanic_seq.NEXTVAL, p_name, p_phone, p_email, p_expertise);
+END;
 /
 
-CREATE OR REPLACE PROCEDURE UpdateMechanic(
-    p_mechanic_id IN NUMBER,
-    p_name IN VARCHAR2,
-    p_email IN VARCHAR2,
-    p_phone IN VARCHAR2,
-    p_specialty IN VARCHAR2,
-    p_experience IN NUMBER
+CREATE OR REPLACE PROCEDURE delete_mechanic (
+    p_mechanic_id IN Mechanic.mechanic_id%TYPE
 ) AS
-BEGIN
-    UPDATE Mechanic
-    SET name = p_name, email = p_email, phone = p_phone, specialty = p_specialty, experience = p_experience
-    WHERE mechanic_id = p_mechanic_id;
-    COMMIT;
-END UpdateMechanic;
-/
-
-CREATE OR REPLACE PROCEDURE DeleteMechanic(p_mechanic_id IN NUMBER) AS
 BEGIN
     DELETE FROM Mechanic WHERE mechanic_id = p_mechanic_id;
-    COMMIT;
-END DeleteMechanic;
+END;
 /
 
--- mechanic_trigger.sql: PL/SQL trigger to notify admins when a new mechanic is added
-CREATE OR REPLACE TRIGGER NotifyAdminOnNewMechanic
+-- mechanic_trigger.sql - Notify Admins when a new Mechanic is added
+CREATE OR REPLACE TRIGGER notify_admin_mechanic
 AFTER INSERT ON Mechanic
 FOR EACH ROW
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('New mechanic added: ' || :NEW.name || ' (Email: ' || :NEW.email || ')');
-END NotifyAdminOnNewMechanic;
+    INSERT INTO Admin_Notifications (message)
+    VALUES ('New mechanic ' || :NEW.name || ' has been added.');
+END;
 /
