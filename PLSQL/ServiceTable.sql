@@ -8,7 +8,7 @@ CREATE TABLE Service (
     Mechanic VARCHAR2(100)
 );
 
-
+--procedure for Add service
 CREATE OR REPLACE PROCEDURE AddService (
     p_ServiceID IN INT,
     p_CustomerName IN VARCHAR2,
@@ -42,7 +42,7 @@ END;
 /
 
 
-
+-- procedure for read service
 CREATE OR REPLACE PROCEDURE ReadService (
     p_ServiceID IN INT DEFAULT NULL,
     p_CustomerName IN VARCHAR2 DEFAULT NULL,
