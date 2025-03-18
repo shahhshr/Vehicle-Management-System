@@ -64,8 +64,95 @@ BEGIN
 END ReadAppointment;
 /
 
+--call the procedure
 BEGIN
     ReadAppointment(p_AppointmentID => &AppointmentID);
+END;
+/
+
+    
+--procedure for UpdateAppointment
+CREATE OR REPLACE PROCEDURE UpdateAppointment (
+    p_AppointmentID IN INT,
+    p_VehicleID IN INT,
+    p_CustomerName IN VARCHAR2,
+    p_AppointmentDate IN DATE,
+    p_ServiceType IN VARCHAR2,
+    p_Status IN VARCHAR2
+) AS
+    v_RowCount INT;
+BEGIN
+    -- Check if the appointment exists
+    SELECT COUNT(*)
+    INTO v_RowCount
+    FROM Appointments
+    WHERE AppointmentID = p_AppointmentID;
+
+    -- If the appointment does not exist, raise an error
+    IF v_RowCount = 0 THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Appointment with ID ' || p_AppointmentID || ' does not exist.');
+    ELSE
+        -- Update the appointment
+        UPDATE Appointments
+        SET
+            VehicleID = p_VehicleID,
+            CustomerName = p_CustomerName,
+            AppointmentDate = p_AppointmentDate,
+            ServiceType = p_ServiceType,
+            Status = p_Status
+        WHERE
+            AppointmentID = p_AppointmentID;
+
+        COMMIT;
+    END IF;
+END UpdateAppointment;
+/
+
+--call the procedure
+BEGIN
+    UpdateAppointment(
+        p_AppointmentID => &p_AppointmentID,
+        p_VehicleID => &p_VehicleID,
+        p_CustomerName => '&p_CustomerName',
+        p_AppointmentDate => TO_DATE('&p_AppointmentDate', 'YYYY-MM-DD'),
+        p_ServiceType => '&p_ServiceType',
+        p_Status => '&p_Status'
+    );
+END;
+/
+
+-- procedure for Delete Appointment
+CREATE OR REPLACE PROCEDURE DeleteAppointment (
+    p_AppointmentID IN INT
+) AS
+    v_RowCount INT;
+BEGIN
+    -- Check if the appointment exists
+    SELECT COUNT(*)
+    INTO v_RowCount
+    FROM Appointments
+    WHERE AppointmentID = p_AppointmentID;
+
+    -- If the appointment does not exist, raise an error
+    IF v_RowCount = 0 THEN
+        RAISE_APPLICATION_ERROR(-20003, 'Appointment with ID ' || p_AppointmentID || ' does not exist.');
+    ELSE
+        -- Delete the appointment
+        DELETE FROM Appointments
+        WHERE AppointmentID = p_AppointmentID;
+
+        COMMIT;
+    END IF;
+END DeleteAppointment;
+/
+
+
+-- Prompt the user for input
+ACCEPT p_AppointmentID NUMBER PROMPT 'Enter the Appointment ID to delete: '
+
+-- Call the procedure with the user input
+BEGIN
+    DeleteAppointment(&p_AppointmentID);
 END;
 /
 
