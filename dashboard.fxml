@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.DashboardController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/image_z.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="514.0" layoutY="30.0" text="User Profile" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label fx:id="lblHome" layoutX="21.0" layoutY="27.0" prefHeight="18.0" prefWidth="50.0" text="Home" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomer" layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVehicles" layoutX="21.0" layoutY="83.0" text="Vehicles" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAppointment" layoutX="21.0" layoutY="112.0" text="Appointment" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblService" layoutX="21.0" layoutY="141.0" text="Service" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblInventory" layoutX="21.0" layoutY="170.0" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPayment" layoutX="21.0" layoutY="199.0" text="Payment &amp; Invoicing" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblViewReport" layoutX="21.0" layoutY="228.0" text="View Report" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logout.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
+         </children>
+      </Pane>
+      <TabPane layoutX="170.0" layoutY="80.0" prefHeight="320.0" prefWidth="430.0" style="-fx-background-color: #F5F5F5;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <tabs>
+            <Tab text="Upcoming Appointments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="28.0" layoutY="28.0" prefHeight="100.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #4D8BA0;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.25" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="26.0" layoutY="5.0" text="Name:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="23.0" text="Vehicle:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="41.0" text="Service:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="60.0" text="Date:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="77.0" text="Assigned Mechanic:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="6.0" text="John Doe" />
+                              <Label layoutX="86.0" layoutY="24.0" text="Tesla Model 3" />
+                              <Label layoutX="87.0" layoutY="42.0" text="Detailing" />
+                              <Label layoutX="68.0" layoutY="60.0" text="2025-02-20" />
+                              <Label layoutX="168.0" layoutY="78.0" text="Alice Smith" />
+                              <Label layoutX="172.0" layoutY="60.0" text="Time:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="214.0" layoutY="60.0" text="10:00 AM" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="28.0" layoutY="157.0" prefHeight="100.0" prefWidth="380.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #4D8BA0;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.25" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="26.0" layoutY="5.0" text="Name:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="23.0" text="Vehicle:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="41.0" text="Service:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="60.0" text="Date:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="77.0" text="Assigned Mechanic:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="75.0" layoutY="6.0" text="Jane Smith " />
+                              <Label layoutX="86.0" layoutY="24.0" text="Honda Civic" />
+                              <Label layoutX="87.0" layoutY="42.0" text="Paint Protection Film (PPF)" />
+                              <Label layoutX="68.0" layoutY="60.0" text="2025-02-20" />
+                              <Label layoutX="168.0" layoutY="78.0" text="Bob Johnson" />
+                              <Label layoutX="172.0" layoutY="60.0" text="Time:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="214.0" layoutY="60.0" text="02:00 PM" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Quick Actions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="34.0" prefHeight="220.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #4D8BA0;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.25" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="63.0" layoutY="21.0" prefHeight="18.0" prefWidth="109.0" text="Add Customer">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/add.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="63.0" layoutY="60.0" prefHeight="18.0" prefWidth="130.0" text="Schedule Service">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/calendar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="63.0" layoutY="100.0" prefHeight="18.0" prefWidth="131.0" text="Generate Invoice">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/invoice.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="63.0" layoutY="139.0" prefHeight="18.0" prefWidth="136.0" text="Assign Mechanic">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/mechanic.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="63.0" layoutY="179.0" prefHeight="18.0" prefWidth="109.0" text="View Reports">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/report.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Notifications">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="40.0" layoutY="34.0" prefHeight="220.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #4D8BA0;">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.25" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="120.0" text="Notifications:">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="51.0" layoutY="49.0" prefHeight="18.0" prefWidth="120.0" text="Low stock alert:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="62.0" layoutY="67.0" prefHeight="18.0" prefWidth="120.0" text="Ceramic Coating">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="17.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/warning.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="55.0" layoutY="99.0" prefHeight="18.0" prefWidth="139.0" text="Service completed:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="66.0" layoutY="117.0" prefHeight="18.0" prefWidth="120.0" text="John Doe - Tesla">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/complete.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="55.0" layoutY="148.0" prefHeight="18.0" prefWidth="135.0" text="Payment overdue:">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="66.0" layoutY="166.0" prefHeight="18.0" prefWidth="120.0" text="Jane Smith - Honda">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="21.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/warning.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
