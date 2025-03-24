@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.UpdateScheduleServiceController">
    <children>
       <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -34,21 +37,30 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label layoutX="181.0" layoutY="4.0" text="Schedule Service">
+            <Label layoutX="50.0" layoutY="5.0" text="Update Schedule" AnchorPane.leftAnchor="50.0">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+            <Button layoutX="373.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-         </children></AnchorPane>
-      <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         </children>
+      </AnchorPane>
+      
+      <!-- Sidebar -->
+      <AnchorPane layoutY="80.0" prefHeight="420.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
+            <Label layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             <Label layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
                <font>
                   <Font size="14.0" />
@@ -84,46 +96,50 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/logout.png" />
                </image>
             </ImageView>
-            <Label layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
-            <Label layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
+            <Label layoutX="45.0" layoutY="275.0" prefHeight="17.0" prefWidth="50.0" text="Logout" textFill="WHITE" />
          </children>
       </AnchorPane>
-      <Button layoutX="310.0" layoutY="320.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="421.0" layoutY="320.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancel" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="198.0" layoutY="320.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Save" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Button>
+      
       <Label layoutX="184.0" layoutY="117.0" text="Service Detail:" underline="true">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="198.0" layoutY="138.0" text="Customer ID:" />
-      <Label layoutX="198.0" layoutY="158.0" text="Customer Name:" />
-      <Label layoutX="198.0" layoutY="178.0" text="Vehicle:" />
-      <Label layoutX="198.0" layoutY="198.0" text="Service:" />
-      <Label layoutX="198.0" layoutY="218.0" text="Date:" />
-      <Label layoutX="198.0" layoutY="239.0" text="Time:" />
-      <Label layoutX="199.0" layoutY="260.0" text="Mechanic:" />
-      <Label layoutX="198.0" layoutY="283.0" text="Service Status:" />
+      <Label layoutX="198.0" layoutY="138.0" text="Service ID:" />
+      <TextField fx:id="customerIdField" layoutX="300.0" layoutY="135.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="168.0" text="Customer Name:" />
+      <TextField fx:id="customerNameField" layoutX="300.0" layoutY="165.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="198.0" text="Vehicle:" />
+      <TextField fx:id="vehicleField" layoutX="300.0" layoutY="195.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="228.0" text="Service Detail:" />
+      <TextField fx:id="serviceDetailField" layoutX="300.0" layoutY="225.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="258.0" text="Date:" />
+      <DatePicker fx:id="datePicker" layoutX="300.0" layoutY="255.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="288.0" text="Time:" />
+      <TextField fx:id="timeField" layoutX="300.0" layoutY="285.0" prefWidth="200.0" />
+      
+      <Label layoutX="198.0" layoutY="318.0" text="Mechanic:" />
+      <ComboBox fx:id="mechanicComboBox" layoutX="300.0" layoutY="315.0" prefWidth="200.0" />
+      
+      <Button fx:id="cancelButton" layoutX="341.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="231.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleSaveButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

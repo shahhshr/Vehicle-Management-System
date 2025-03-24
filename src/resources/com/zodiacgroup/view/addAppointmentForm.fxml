@@ -8,43 +8,53 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.AppointmentController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.AddAppointmentController">
    <children>
       <!-- Header -->
-      <Pane prefHeight="80.0" prefWidth="800.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
                <image>
                   <Image url="@../img/image_z.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625">
+            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
                <font>
                   <Font name="Arial Bold" size="36.0" />
                </font>
             </Text>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="676.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="25.0">
                <image>
                   <Image url="@../img/user.png" />
                </image>
             </ImageView>
-            <Label layoutX="706.0" layoutY="32.0" text="User Profile" textFill="WHITE">
+            <Label layoutX="514.0" layoutY="30.0" text="User Profile" textFill="WHITE" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
          </children>
-      </Pane>
-
+      </AnchorPane>
+           
       <!-- Sub-header -->
-      <Pane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="667.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="667.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+               <Label layoutX="184.0" layoutY="6.0" text="Add Appointment">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+            <Button layoutX="542.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" onAction="#handleBackButtonAction" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
       <!-- Sidebar -->
-      <Pane layoutY="80.0" prefHeight="420.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+      <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <Label layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
                <font>
@@ -86,14 +96,14 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/logout.png" />
                </image>
             </ImageView>
-            <Label layoutX="45.0" layoutY="373.0" text="Logout" textFill="WHITE" />
+            <Label layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
          </children>
-      </Pane>
+      </AnchorPane>
 
       <!-- Form -->
       <Label layoutX="200.0" layoutY="120.0" text="Appointment ID:" textFill="BLACK">
@@ -122,23 +132,30 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Label>
-      <DatePicker fx:id="appointmentDateField" layoutX="350.0" layoutY="240.0" />
+      <DatePicker fx:id="appointmentDateField" layoutX="350.0" layoutY="240.0" prefHeight="26.0" prefWidth="150.0" />
 
       <Label layoutX="200.0" layoutY="280.0" text="Service Type:" textFill="BLACK">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="serviceTypeField" layoutX="350.0" layoutY="280.0" prefWidth="150.0" />
+      <ComboBox fx:id="serviceTypeField" layoutX="350.0" layoutY="280.0" prefWidth="150.0" promptText="Select Service" />
 
       <Label layoutX="200.0" layoutY="320.0" text="Status:" textFill="BLACK">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="statusField" layoutX="350.0" layoutY="320.0" prefWidth="150.0" />
+     <ComboBox fx:id="statusField" layoutX="350.0" layoutY="320.0" prefWidth="150.0" promptText="Select Status" />
 
-      <Button layoutX="400.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleSaveAppointment" text="Save" textFill="BLACK" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5;">
+      <Button layoutX="400.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleSaveAppointment" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5;" text="Save" textFill="BLACK">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+
+      <!-- Back Button -->
+      <Button layoutX="300.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5;" text="Cancel" textFill="BLACK" AnchorPane.rightAnchor="235.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>

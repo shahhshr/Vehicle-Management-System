@@ -7,57 +7,57 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.ScheduleServiceController">
    <children>
-      <Pane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
                <image>
                   <Image url="@../img/image_z.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625">
+            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
                <font>
                   <Font name="Arial Bold" size="36.0" />
                </font>
             </Text>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="25.0">
                <image>
                   <Image url="@../img/user.png" />
                </image>
             </ImageView>
-            <Label layoutX="514.0" layoutY="30.0" text="User Profile" textFill="WHITE">
+            <Label layoutX="514.0" layoutY="30.0" text="User Profile" textFill="WHITE" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
          </children>
-      </Pane>
-      <Pane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      </AnchorPane>
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <Label layoutX="181.0" layoutY="4.0" text="Schedule Service">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="27.0" layoutX="444.0" layoutY="1.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="INSIDE" width="150.0" />
-            <Label layoutX="478.0" layoutY="6.0" text="Search" textFill="#908a8a">
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="WHITE" height="27.0" layoutX="444.0" layoutY="1.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" strokeType="INSIDE" width="150.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0" />
+            <Label layoutX="478.0" layoutY="6.0" text="Search" textFill="#908a8a" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="6.0">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="449.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="449.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="3.0">
                <image>
                   <Image url="@../img/search.png" />
                </image>
             </ImageView>
-         </children></Pane>
-      <Pane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <Label layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
                <font>
@@ -106,13 +106,13 @@
                </font>
             </Label>
          </children>
-      </Pane>
-      <Button layoutX="518.0" layoutY="118.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Add" textFill="WHITE">
+      </AnchorPane>
+      <Button fx:id="addButton" layoutX="355.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Add" textFill="WHITE" AnchorPane.topAnchor="118.0">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Button>
-      <TableView layoutX="182.0" layoutY="158.0" prefHeight="211.0" prefWidth="407.0">
+      <TableView layoutX="182.0" layoutY="158.0" prefHeight="211.0" prefWidth="407.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="10.0">
          <columns>
             <TableColumn prefWidth="65.0" text="Service ID" />
             <TableColumn prefWidth="99.0" text="Customer Name" />
@@ -121,5 +121,15 @@
             <TableColumn prefWidth="66.0" text="View" />
          </columns>
       </TableView>
+      <Button fx:id="updateButton" layoutX="437.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleUpdateButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Update" textFill="WHITE" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="514.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

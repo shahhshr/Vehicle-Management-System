@@ -2,53 +2,55 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
                <image>
                   <Image url="@../img/image_z.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625">
+            <Text fill="WHITE" layoutX="108.0" layoutY="52.58984375" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="264.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
                <font>
                   <Font name="Arial Bold" size="36.0" />
                </font>
             </Text>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="482.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="477.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="25.0">
                <image>
                   <Image url="@../img/user.png" />
                </image>
-            </ImageView>
-            <Label layoutX="514.0" layoutY="30.0" text="User Profile" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="14.0" />
-               </font>
-            </Label>
+           </ImageView>
+			<Label layoutX="507.0" layoutY="32.0" text="User Profile" textFill="WHITE" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="30.0">
+			
+				<font>
+					<Font name="Arial Bold" size="14.0" />
+				</font>
+			</Label>
+
          </children>
-      </Pane>
-      <Pane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      </AnchorPane>
+      <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <Label layoutX="181.0" layoutY="4.0" text="Vehicles">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back">
+            <Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0" onAction="#handleBackButtonAction">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Button>
-         </children></Pane>
-      <Pane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         </children></AnchorPane>
+      <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <Label layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
                <font>
@@ -97,36 +99,61 @@
                </font>
             </Label>
          </children>
-      </Pane>
-      <Label layoutX="181.0" layoutY="184.0" text="Customer Detail:" underline="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="180.0" layoutY="120.0" text="Vehicle" underline="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="186.0" layoutY="275.0" text="Appoinment" underline="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="186.0" layoutY="301.0" text="Service" underline="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="186.0" layoutY="327.0" text="Payment" underline="true">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="194.0" layoutY="142.0" text="Vehicle ID:" />
-      <Label layoutX="194.0" layoutY="163.0" text="Model:" />
-      <Label layoutX="196.0" layoutY="209.0" text="Customer ID:" />
-      <Label layoutX="196.0" layoutY="229.0" text="First Name:" />
-      <Label layoutX="196.0" layoutY="249.0" text="Last Name:" />
+      </AnchorPane>
+      <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="290.0" prefWidth="430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+         <content>
+            <AnchorPane prefHeight="280.0" prefWidth="430.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="9.0" text="Vehicle" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="271.0" text="Appointment" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="297.0" text="Service" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="323.0" text="Payment" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="31.0" text="Vehicle ID:" />
+                  <Label layoutX="28.0" layoutY="51.0" text="Make:" />
+                  <Label layoutX="28.0" layoutY="72.0" text="Model:" />
+                  <Label layoutX="28.0" layoutY="92.0" text="Year:" />
+                  <Label layoutX="28.0" layoutY="111.0" text="VIN:" />
+                  <Text layoutX="101.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="79.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="79.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="70.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="66.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Label layoutX="10.0" layoutY="129.0" text="Customer Detail:" underline="true">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="150.0" text="Customer ID:" />
+                  <Label layoutX="24.0" layoutY="170.0" text="First Name:" />
+                  <Label layoutX="24.0" layoutY="190.0" text="Last Name:" />
+                  <Label layoutX="24.0" layoutY="210.0" text="Phone Number:" />
+                  <Label layoutX="24.0" layoutY="230.0" text="Email ID:" />
+                  <Label layoutX="24.0" layoutY="249.0" text="Address:" />
+                  <Text layoutX="106.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="101.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="96.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="120.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="82.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+                  <Text layoutX="83.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

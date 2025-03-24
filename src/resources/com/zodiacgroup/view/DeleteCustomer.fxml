@@ -2,14 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.DeleteCustomerController">
 	<children>
 		<AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<children>
@@ -37,7 +37,7 @@
 		</AnchorPane>
 		<AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<children>
-				<Label layoutX="181.0" layoutY="4.0" prefHeight="21.0" prefWidth="103.0" text="Customer : " AnchorPane.topAnchor="4.0">
+				<Label layoutX="181.0" layoutY="4.0" prefHeight="21.0" prefWidth="103.0" text="Customer  " AnchorPane.topAnchor="4.0">
 					<font>
 						<Font name="Arial Bold" size="18.0" />
 					</font>
@@ -47,11 +47,6 @@
 						<Font name="Arial Bold" size="14.0" />
 					</font>
 				</Button>
-				<Label layoutX="283.0" layoutY="4.0" prefHeight="21.0" prefWidth="150.0" text="Customer Name" AnchorPane.topAnchor="4.0">
-					<font>
-						<Font name="Arial Bold" size="18.0" />
-					</font>
-				</Label>
 			</children>
 		</AnchorPane>
 		<AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
@@ -104,58 +99,21 @@
 				</Label>
 			</children>
 		</AnchorPane>
-		<ScrollPane prefHeight="290.0" prefWidth="430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-			<content>
-				<AnchorPane prefHeight="280.0" prefWidth="430.0">
-					<Label layoutX="14.0" layoutY="7.0" text="Customer Detail:" underline="true">
-						<font>
-							<Font name="Arial Bold" size="14.0" />
-						</font>
-					</Label>
-					<Label layoutX="14.0" layoutY="148.0" text="Vehicle" underline="true">
-						<font>
-							<Font name="Arial Bold" size="14.0" />
-						</font>
-					</Label>
-					<Label layoutX="14.0" layoutY="271.0" text="Appointment" underline="true">
-						<font>
-							<Font name="Arial Bold" size="14.0" />
-						</font>
-					</Label>
-					<Label layoutX="14.0" layoutY="297.0" text="Service" underline="true">
-						<font>
-							<Font name="Arial Bold" size="14.0" />
-						</font>
-					</Label>
-					<Label layoutX="14.0" layoutY="323.0" text="Payment" underline="true">
-						<font>
-							<Font name="Arial Bold" size="14.0" />
-						</font>
-					</Label>
-					<Label layoutX="28.0" layoutY="170.0" text="Vehicle ID:" />
-					<Label layoutX="28.0" layoutY="190.0" text="Make:" />
-					<Label layoutX="28.0" layoutY="28.0" text="Customer ID:" />
-					<Label layoutX="28.0" layoutY="48.0" text="First Name:" />
-					<Label layoutX="28.0" layoutY="68.0" text="Last Name:" />
-					<Label layoutX="28.0" layoutY="88.0" text="Phone Number:" />
-					<Label layoutX="28.0" layoutY="108.0" text="Email ID:" />
-					<Label layoutX="28.0" layoutY="127.0" text="Address:" />
-               <Text layoutX="110.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="101.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="100.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="124.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="86.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="87.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Label layoutX="28.0" layoutY="211.0" text="Model:" />
-               <Label layoutX="28.0" layoutY="231.0" text="Year:" />
-               <Label layoutX="28.0" layoutY="250.0" text="VIN:" />
-               <Text layoutX="97.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="75.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="75.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="66.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-               <Text layoutX="62.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="170.0" />
-				</AnchorPane>
-			</content>
-		</ScrollPane>
+      <Label layoutX="204.0" layoutY="135.0" text="Customer Id:" textFill="BLACK">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="appointmentIdField" layoutX="302.0" layoutY="130.0" />
+      <Button fx:id="deleteButton" layoutX="347.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5;" text="Delete" textFill="BLACK">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="247.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5;" text="Cancel" textFill="BLACK">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
 	</children>
 </AnchorPane>

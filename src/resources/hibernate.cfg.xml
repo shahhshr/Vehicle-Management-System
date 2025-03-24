@@ -5,14 +5,26 @@
 
 <hibernate-configuration>
     <session-factory>
+        <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
         <property name="hibernate.connection.url">jdbc:oracle:thin:@calvin.humber.ca:1521:grok</property>
         <property name="hibernate.connection.username">n01710904</property>
         <property name="hibernate.connection.password">oracle</property>
+
+        <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Enable transaction management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
         <property name="hibernate.show_sql">true</property>
 
-        <mapping class="com.com.zodiacgroup.model.Customer"/>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Names the annotated entity class -->
+        <mapping class="com.zodiacgroup.model.Customer"/>
+        <mapping class="com.zodiacgroup.model.Vehicle"/>
     </session-factory>
 </hibernate-configuration>
