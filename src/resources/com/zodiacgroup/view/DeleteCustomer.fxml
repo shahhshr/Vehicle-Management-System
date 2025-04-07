@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.EditCustomerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.DeleteCustomerController">
 	<children>
 		<AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<children>
@@ -28,12 +28,12 @@
 		</AnchorPane>
 		<AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<children>
-				<Label layoutX="181.0" layoutY="4.0" text="Customer ">
+				<Label layoutX="181.0" layoutY="4.0" prefHeight="21.0" prefWidth="103.0" text="Customer  " AnchorPane.topAnchor="4.0">
 					<font>
 						<Font name="Arial Bold" size="18.0" />
 					</font>
 				</Label>
-				<Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+				<Button layoutX="511.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">  <!-- Ensure this matches the method name -->
 					<font>
 						<Font name="Arial Bold" size="14.0" />
 					</font>
@@ -85,11 +85,6 @@
 				<Label fx:id="lblLogout" layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
 			</children>
 		</AnchorPane>
-		<Button fx:id="deleteButton" layoutX="347.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Delete" textFill="WHITE">
-			<font>
-				<Font name="Arial Bold" size="14.0" />
-			</font>
-		</Button>
 		<Label layoutX="184.0" layoutY="122.0" text="Customer Detail:" underline="true">
 			<font>
 				<Font name="Arial Bold" size="14.0" />
@@ -101,21 +96,25 @@
 		<Label layoutX="200.0" layoutY="249.0" text="Phone Number:" />
 		<Label layoutX="202.0" layoutY="279.0" text="Email ID:" />
 		<Label layoutX="201.0" layoutY="310.0" text="Address:" />
-		<Button fx:id="saveButton" layoutX="238.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Save" textFill="WHITE">
-			<font>
-				<Font name="Arial Bold" size="14.0" />
-			</font>
-		</Button>
-		<Button fx:id="cancelButton" layoutX="461.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancle" textFill="WHITE">
-			<font>
-				<Font name="Arial Bold" size="14.0" />
-			</font>
-		</Button>
+
+		<!-- Display fields (uneditable) -->
 		<TextField fx:id="customerIdField" editable="false" layoutX="296.0" layoutY="154.0" prefWidth="200.0" style="-fx-opacity: 1; -fx-background-color: #f4f4f4;" />
-		<TextField fx:id="firstNameField" layoutX="296.0" layoutY="184.0" prefWidth="200.0" />
-		<TextField fx:id="lastNameField" layoutX="296.0" layoutY="214.0" prefWidth="200.0" />
-		<TextField fx:id="phoneNumberField" layoutX="296.0" layoutY="244.0" prefWidth="200.0" />
-		<TextField fx:id="emailField" layoutX="296.0" layoutY="274.0" prefWidth="200.0" />
-		<TextArea fx:id="addressField" layoutX="296.0" layoutY="305.0" prefHeight="50.0" prefWidth="200.0" />
+		<TextField fx:id="firstNameField" editable="false" layoutX="296.0" layoutY="184.0" prefWidth="200.0" />
+		<TextField fx:id="lastNameField" editable="false" layoutX="296.0" layoutY="214.0" prefWidth="200.0" />
+		<TextField fx:id="phoneNumberField" editable="false" layoutX="296.0" layoutY="244.0" prefWidth="200.0" />
+		<TextField fx:id="emailField" editable="false" layoutX="296.0" layoutY="274.0" prefWidth="200.0" />
+		<TextArea fx:id="addressField" editable="false" layoutX="296.0" layoutY="305.0" prefHeight="50.0" prefWidth="200.0" />
+
+		<!-- Action buttons -->
+		<Button fx:id="deleteButton" layoutX="238.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Delete" textFill="WHITE">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Button>
+		<Button fx:id="cancelButton" layoutX="347.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancel" textFill="WHITE">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Button>
 	</children>
 </AnchorPane>
