@@ -11,6 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.ViewMechanicController">
 	<children>
+		<!-- Header Pane -->
 		<AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 			<children>
 				<ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
@@ -26,6 +27,7 @@
 			</children>
 		</AnchorPane>
 
+		<!-- Title Bar -->
 		<AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 			<children>
 				<Label layoutX="181.0" layoutY="4.0" text="Mechanic :">
@@ -46,6 +48,7 @@
 			</children>
 		</AnchorPane>
 
+		<!-- Sidebar Pane -->
 		<AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
 			<children>
 				<Label fx:id="lblHome" layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
@@ -92,9 +95,11 @@
 			</children>
 		</AnchorPane>
 
+		<!-- Main Content ScrollPane -->
 		<ScrollPane prefHeight="290.0" prefWidth="430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
 			<content>
 				<AnchorPane prefHeight="500.0" prefWidth="430.0">
+					<!-- Mechanic Details Section -->
 					<Label layoutX="14.0" layoutY="7.0" text="Mechanic Detail:" underline="true">
 						<font>
 							<Font name="Arial Bold" size="14.0" />

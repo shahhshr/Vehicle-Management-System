@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.ViewSaleController">    
+    <children>
+        <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
+                    <image>
+                        <Image url="@../img/image_z.png" />
+                    </image>
+                </ImageView>
+                <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
+                    <font>
+                        <Font name="Arial Bold" size="36.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label layoutX="181.0" layoutY="4.0" prefHeight="21.0" prefWidth="103.0" text="Sales Rep : " AnchorPane.topAnchor="4.0">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="cancelButton" layoutX="514.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+                <Label fx:id="salesRepNameLabel" layoutX="283.0" layoutY="4.0" prefHeight="21.0" prefWidth="150.0" text="Sales Rep Name" AnchorPane.topAnchor="4.0">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+       <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <Label fx:id="lblHome" layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCustomer" layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblPayment" layoutX="21.0" layoutY="81.0" text="Payment" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblInventory" layoutX="21.0" layoutY="108.0" text="Inventory" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblSalesRep" layoutX="21.0" layoutY="135.0" text="Sales Representative" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblManager" layoutX="21.0" layoutY="162.0" text="Mechanic" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblViewReport" layoutX="21.0" layoutY="189.0" text="View Report" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/logout.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblLogout" layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+        
+        <ScrollPane prefHeight="700.0" prefWidth="1030.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+            <content>
+                <VBox prefHeight="700.0" prefWidth="1030.0" spacing="20" style="-fx-padding: 10;">
+                    <!-- Sales Rep Details Section -->
+                    <VBox spacing="10" style="-fx-padding: 10; -fx-background-color: #f5f5f5; -fx-border-color: #ddd; -fx-border-radius: 5;">
+                        <Label text="Sales Representative Details:" underline="true">
+                            <font>
+                                <Font name="Arial Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        
+                        <GridPane hgap="10" vgap="10">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="100" />
+                                <ColumnConstraints prefWidth="300" />
+                            </columnConstraints>
+                            
+                            <Label text="Employee ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <Text fx:id="employeeIdText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            
+                            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Text fx:id="employeeNameText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            
+                            <Label text="Position:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <Text fx:id="positionText" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            
+                            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <Text fx:id="emailText" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            
+                            <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                            <Text fx:id="phoneText" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            
+                            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                            <Text fx:id="usernameText" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            
+                            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                            <Text fx:id="passwordText" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+                    </VBox>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
