@@ -1,18 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE hibernate-configuration PUBLIC 
-    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
-    "/Users/poorvapatel/Desktop/EorkSpace1/HibernateWeek6/src/hibernate-configuration-3.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "/Users/poorvapatel/Desktop/EorkSpace1/HibernateWeek6/src/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-    <session-factory>
-        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@calvin.humber.ca:1521:grok</property>
-        <property name="hibernate.connection.username">n01710904</property>
-        <property name="hibernate.connection.password">oracle</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
-        <property name="hibernate.show_sql">true</property>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">
+			oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">
+			jdbc:oracle:thin:@calvin.humber.ca:1521:grok</property>
+		<property name="hibernate.connection.username">techtrek</property>
+		<property name="hibernate.connection.password">Ite5220</property>
 
-        <mapping class="com.com.zodiacgroup.model.Customer"/>
-    </session-factory>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.Oracle12cDialect</property>
+
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<property name="hibernate.show_sql">true</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping class="com.zodiacgroup.model.Customer" />
+		<mapping class="com.zodiacgroup.model.Vehicle" />
+		<mapping class="com.zodiacgroup.model.Appointment" />
+		<mapping class="com.zodiacgroup.model.Service" />
+		<mapping class="com.zodiacgroup.model.Mechanic"/>
+		<mapping class="com.zodiacgroup.model.Inventory" />
+		<mapping class="com.zodiacgroup.model.Login"/>
+		<mapping class="com.zodiacgroup.model.Notification"/>
+		<mapping class="com.zodiacgroup.model.Payment"/>
+		<mapping class="com.zodiacgroup.model.SaleRepresentative"/>
+
+	</session-factory>
 </hibernate-configuration>
