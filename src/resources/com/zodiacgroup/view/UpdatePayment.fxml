@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.UpdatePaymentController">
+    <children>
+        <AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
+                    <image>
+                        <Image url="@../img/image_z.png" />
+                    </image>
+                </ImageView>
+                <Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
+                    <font>
+                        <Font name="Arial Bold" size="36.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label layoutX="181.0" layoutY="4.0" text="Update Payment">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="cancelButton" layoutX="1117.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+                    <font>
+                        <Font name="Arial Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+
+        <AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <Label fx:id="lblHome" layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCustomer" layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblPayment" layoutX="21.0" layoutY="81.0" text="Payment" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblInventory" layoutX="21.0" layoutY="108.0" text="Inventory" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblSalesRep" layoutX="21.0" layoutY="135.0" text="Sales Representative" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblManager" layoutX="21.0" layoutY="162.0" text="Mechanic" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblViewReport" layoutX="21.0" layoutY="189.0" text="View Report" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/logout.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="lblLogout" layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+
+        <AnchorPane layoutX="169.0" prefHeight="200.0" prefWidth="431.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <AnchorPane layoutX="200.0" layoutY="50.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #E2EBEE; -fx-background-radius: 10;">
+                    <children>
+                       <Label layoutX="30.0" layoutY="30.0" text="Invoice ID:" />
+<TextField fx:id="invoiceIdField" editable="false" layoutX="30.0" layoutY="50.0" prefWidth="150.0" />
+
+<Label layoutX="30.0" layoutY="90.0" text="Customer ID:" />
+<TextField fx:id="customerIdField" editable="false" layoutX="30.0" layoutY="110.0" prefWidth="150.0" />
+
+<Label layoutX="30.0" layoutY="150.0" text="Customer Name:" />
+<TextField fx:id="customerNameField" editable="false" layoutX="30.0" layoutY="170.0" prefWidth="200.0" />
+
+<Label layoutX="30.0" layoutY="210.0" text="Service ID:" />
+<TextField fx:id="serviceIdField" editable="false" layoutX="30.0" layoutY="230.0" prefWidth="150.0" />
+
+<Label layoutX="280.0" layoutY="30.0" text="Amount:" />
+<TextField fx:id="amountField" layoutX="280.0" layoutY="50.0" prefWidth="200.0" />
+
+<Label layoutX="280.0" layoutY="90.0" text="Payment Date:" />
+<DatePicker fx:id="paymentDatePicker" layoutX="280.0" layoutY="110.0" prefWidth="200.0" />
+
+<Label layoutX="280.0" layoutY="150.0" text="Payment Method:" />
+<ComboBox fx:id="paymentMethodComboBox" layoutX="280.0" layoutY="170.0" prefWidth="200.0" />
+
+<Label layoutX="280.0" layoutY="210.0" text="Status:" />
+<ComboBox fx:id="statusComboBox" layoutX="280.0" layoutY="230.0" prefWidth="200.0" />
+
+<Button fx:id="updateButton" layoutX="280.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleUpdateButtonAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #000000;" text="Update Payment" textFill="WHITE">
+    <font>
+        <Font name="Arial Bold" size="14.0" />
+    </font>
+</Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

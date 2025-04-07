@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.ProcessInvoiceController">
+   
+    
+    <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox spacing="20" style="-fx-padding: 20;">
+            <HBox alignment="CENTER_LEFT" spacing="20">
+                <ImageView fitHeight="80.0" fitWidth="80.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/image_z.png" />
+                    </image>
+                </ImageView>
+                <VBox spacing="5" />
+                 <Text style="-fx-font-size: 24; -fx-font-weight: bold;" text="Zodiac Group" />
+            </HBox>
+            
+            <HBox alignment="CENTER" style="-fx-padding: 0 0 10 0;">
+                <Label style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #2a5caa;" text="INVOICE" />
+            </HBox>
+            
+            <GridPane hgap="20" style="-fx-padding: 0 0 20 0;" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                    <ColumnConstraints halignment="LEFT" minWidth="200" />
+                    <ColumnConstraints halignment="RIGHT" minWidth="100" />
+                    <ColumnConstraints halignment="LEFT" minWidth="200" />
+                </columnConstraints>
+                
+                <Label style="-fx-font-weight: bold;" text="Invoice Number:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="invoiceNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label style="-fx-font-weight: bold;" text="Invoice Date:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label fx:id="invoiceDateLabel" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                
+                <Label style="-fx-font-weight: bold;" text="Payment Method:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="paymentMethodLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label style="-fx-font-weight: bold;" text="Payment Status:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label fx:id="paymentStatusLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                
+                <Label style="-fx-font-weight: bold;" text="Service ID:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="serviceIdLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label style="-fx-font-weight: bold;" text="Service Date:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label fx:id="serviceDateLabel" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <rowConstraints>
+                   <RowConstraints />
+                   <RowConstraints />
+                   <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+            
+            <HBox alignment="TOP_LEFT" spacing="50">
+                <VBox spacing="5">
+                    <Text style="-fx-font-size: 16; -fx-font-weight: bold; -fx-underline: true;" text="Customer Information" />
+                    <Label style="-fx-font-weight: bold;" text="Customer ID:" />
+                    <Label fx:id="customerIdLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Name:" />
+                    <Label fx:id="customerNameLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Email:" />
+                    <Label fx:id="customerEmailLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Phone:" />
+                    <Label fx:id="customerPhoneLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Address:" />
+                    <Label fx:id="customerAddressLabel" maxWidth="300" wrapText="true" />
+                </VBox>
+                
+                <VBox spacing="5">
+                    <Text style="-fx-font-size: 16; -fx-font-weight: bold; -fx-underline: true;" text="Vehicle Information" />
+                    <Label style="-fx-font-weight: bold;" text="Vehicle ID:" />
+                    <Label fx:id="vehicleIdLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Make/Model:" />
+                    <Label fx:id="vehicleMakeModelLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Year:" />
+                    <Label fx:id="vehicleYearLabel" />
+                    <Label style="-fx-font-weight: bold;" text="VIN:" />
+                    <Label fx:id="vehicleVinLabel" />
+                </VBox>
+                
+                <VBox spacing="5">
+                    <Text style="-fx-font-size: 16; -fx-font-weight: bold; -fx-underline: true;" text="Appointment Information" />
+                    <Label style="-fx-font-weight: bold;" text="Appointment ID:" />
+                    <Label fx:id="appointmentIdLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Appointment Date:" />
+                    <Label fx:id="appointmentDateLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Service Type:" />
+                    <Label fx:id="appointmentServiceTypeLabel" />
+                    <Label style="-fx-font-weight: bold;" text="Status:" />
+                    <Label fx:id="appointmentStatusLabel" />
+                </VBox>
+            </HBox>
+            
+            <VBox spacing="10">
+                <Text style="-fx-font-size: 16; -fx-font-weight: bold; -fx-underline: true;" text="Service Details" />
+                <Label fx:id="serviceDetailLabel" maxWidth="700" wrapText="true" />
+                <Label style="-fx-font-weight: bold;" text="Service Status:" />
+                <Label fx:id="serviceStatusLabel" />
+            </VBox>
+            
+            <HBox alignment="TOP_RIGHT" spacing="20" style="-fx-padding: 0 20 0 0;">
+                <VBox alignment="TOP_RIGHT" spacing="10">
+                    <HBox spacing="10">
+                        <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Total Amount:" />
+                        <Label fx:id="totalAmountLabel" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #2a5caa;" />
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zodiacgroup.controller.UpdateMechanicController">
+	<children>
+		<AnchorPane prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: #35606E;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<ImageView fitHeight="75.0" fitWidth="150.0" layoutX="19.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="2.0">
+					<image>
+						<Image url="@../img/image_z.png" />
+					</image>
+				</ImageView>
+				<Text fill="WHITE" layoutX="106.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zodiac Group" wrappingWidth="265.525390625" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="19.0">
+					<font>
+						<Font name="Arial Bold" size="36.0" />
+					</font>
+				</Text>
+			</children>
+		</AnchorPane>
+		<AnchorPane layoutX="133.0" layoutY="80.0" prefHeight="30.0" prefWidth="467.0" style="-fx-background-color: #E2EBEE;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+			<children>
+				<Label layoutX="181.0" layoutY="4.0" text="Mechanic">
+					<font>
+						<Font name="Arial Bold" size="18.0" />
+					</font>
+				</Label>
+				<Button fx:id="backButton" layoutX="511.0" layoutY="1.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #F4F7F8; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Back" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="1.0">
+					<font>
+						<Font name="Arial Bold" size="14.0" />
+					</font>
+				</Button>
+			</children>
+		</AnchorPane>
+		<AnchorPane layoutY="80.0" prefHeight="320.0" prefWidth="170.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 0px 25px 0px 0px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+			<children>
+				<Label fx:id="lblHome" layoutX="21.0" layoutY="27.0" text="Home" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblCustomer" layoutX="21.0" layoutY="54.0" text="Customer" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblPayment" layoutX="21.0" layoutY="81.0" text="Payment" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblInventory" layoutX="21.0" layoutY="108.0" text="Inventory" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblSalesRep" layoutX="21.0" layoutY="135.0" text="Sales Representative" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblManager" layoutX="21.0" layoutY="162.0" text="Mechanic" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="lblViewReport" layoutX="21.0" layoutY="189.0" text="View Report" textFill="WHITE">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<ImageView fitHeight="15.0" fitWidth="30.0" layoutX="21.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../img/logout.png" />
+					</image>
+				</ImageView>
+				<Label fx:id="lblLogout" layoutX="45.0" layoutY="273.0" text="Logout" textFill="WHITE" />
+			</children>
+		</AnchorPane>
+		<Label layoutX="184.0" layoutY="122.0" text="Mechanic Detail:" underline="true">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Label>
+		<Label layoutX="201.0" layoutY="159.0" text="Mechanic ID:" />
+		<Label layoutX="201.0" layoutY="189.0" text="First Name:" />
+		<Label layoutX="201.0" layoutY="219.0" text="Last Name:" />
+		<Label layoutX="200.0" layoutY="249.0" text="Phone Number:" />
+		<Label layoutX="202.0" layoutY="279.0" text="Email ID:" />
+		<Label layoutX="201.0" layoutY="309.0" text="Specialization:" />
+		<Label layoutX="201.0" layoutY="339.0" text="Experience (years):" />
+		<Button fx:id="saveButton" layoutX="305.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Save" textFill="WHITE">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Button>
+		<Button fx:id="cancelButton" layoutX="413.0" layoutY="377.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="27.0" prefWidth="71.0" style="-fx-background-color: #4D8BA0; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #000000;" text="Cancel" textFill="WHITE">
+			<font>
+				<Font name="Arial Bold" size="14.0" />
+			</font>
+		</Button>
+		<TextField fx:id="mechanicIdField" editable="false" layoutX="296.0" layoutY="154.0" prefWidth="200.0" style="-fx-opacity: 1; -fx-background-color: #f4f4f4;" />
+		<TextField fx:id="firstNameField" layoutX="315.0" layoutY="184.0" prefWidth="200.0" />
+		<TextField fx:id="lastNameField" layoutX="315.0" layoutY="214.0" prefWidth="200.0" />
+		<TextField fx:id="phoneNumberField" layoutX="315.0" layoutY="244.0" prefWidth="200.0" />
+		<TextField fx:id="emailField" layoutX="315.0" layoutY="274.0" prefWidth="200.0" />
+		<TextField fx:id="specializationField" layoutX="315.0" layoutY="304.0" prefWidth="200.0" />
+		<TextField fx:id="experienceYearsField" layoutX="315.0" layoutY="334.0" prefWidth="200.0" />
+	</children>
+</AnchorPane>
