@@ -69,16 +69,17 @@ public class MechanicController extends BaseController implements Initializable 
         if (lblManager != null) {
         	lblManager.setStyle("-fx-font-weight: bold; -fx-underline: true;");
         }
-
+        // Initialize table columns
         mechanicIdColumn.setCellValueFactory(new PropertyValueFactory<>("mechanicId"));
         mechanicNameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(
                 cellData.getValue().getFirstName() + " " + cellData.getValue().getLastName()));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
         skillsColumn.setCellValueFactory(new PropertyValueFactory<>("specialization"));
 
-
+        // Load initial data
         refreshMechanicList();
         
+     // Set up search functionality
         setupSearch();
     }
 
