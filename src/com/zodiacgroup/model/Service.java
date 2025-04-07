@@ -1,50 +1,70 @@
 package com.zodiacgroup.model;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "services")
+@Table(name = "SERVICE")
 public class Service {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") // Primary key
+    @Column(name = "SERVICEID")
     private int id;
-
-    @Column(name = "service_id", unique = true, nullable = false)
-    private String serviceId; // Unique service identifier
-
-    @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false) // Foreign key reference to Customer
-    private Customer customer;
-
-    @Column(name = "vehicle_name", nullable = false)
+    
+    @Column(name = "CUSTOMERID")
+    private int customerId;
+    
+    @Column(name = "CUSTOMERNAME")
+    private String customerName;
+    
+    @Column(name = "VEHICLENAME")
     private String vehicleName;
-
-    @Column(name = "service_detail", nullable = false)
+    
+    @Column(name = "SERVICEDETAIL")
     private String serviceDetail;
+    
+    @Column(name = "STATUS")
+    private String status;
+    
+    @Column(name = "SERVICEDATE") 
+    private Date date;
+    
+    @Column(name = "COST")
+    private double cost;
+    
+    @Column(name = "VEHICLEID")
+    private Integer vehicleId;  
+    
+    @Column(name = "MechanicName")
+    private String mechanicName;
 
-    @Column(name = "date", nullable = false)
-    private String date;
+    // Add getter and setter
+    public Integer getVehicleId() {
+        return vehicleId;
+    }
 
-    @Column(name = "time", nullable = false)
-    private String time;
-
-    @Column(name = "mechanic", nullable = false)
-    private String mechanic;
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+    
+   
 
     // Constructors
     public Service() {}
 
-    public Service(String serviceId, Customer customer, String vehicleName, String serviceDetail, String date, String time, String mechanic) {
-        this.serviceId = serviceId;
-        this.customer = customer;
-        this.vehicleName = vehicleName;
-        this.serviceDetail = serviceDetail;
-        this.date = date;
-        this.time = time;
-        this.mechanic = mechanic;
-    }
+    public Service(int id, int customerId, String customerName, String vehicleName, 
+            String serviceDetail, String status, Date date, double cost, String mechanicName) {
+  this.id = id;
+  this.customerId = customerId;
+  this.customerName = customerName;
+  this.vehicleName = vehicleName;
+  this.serviceDetail = serviceDetail;
+  this.status = status;
+  this.date = date;
+  this.cost = cost;
+  this.mechanicName = mechanicName;
+}
 
     // Getters and Setters
     public int getId() {
@@ -55,20 +75,20 @@ public class Service {
         this.id = id;
     }
 
-    public String getServiceId() {
-        return serviceId;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getVehicleName() {
@@ -87,27 +107,50 @@ public class Service {
         this.serviceDetail = serviceDetail;
     }
 
-    public String getDate() {
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getTime() {
-        return time;
+    public double getCost() {
+        return cost;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setCost(double cost) {
+        this.cost = cost;
     }
 
-    public String getMechanic() {
-        return mechanic;
+    public String getMechanicName() {
+        return mechanicName;
     }
 
-    public void setMechanic(String mechanic) {
-        this.mechanic = mechanic;
+    public void setMechanicName(String mechanicName) {
+        this.mechanicName = mechanicName;
+    }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", vehicleName='" + vehicleName + '\'' +
+                ", serviceDetail='" + serviceDetail + '\'' +
+                ", status='" + status + '\'' +
+                ", date=" + date +
+                ", cost=" + cost +
+                 ", mechanicName='" + mechanicName + '\'' +
+                '}';
     }
 }
