@@ -44,6 +44,7 @@ public class AddMechanicController extends BaseController implements Initializab
 			lblViewReport;
     private String currentRole;
 
+ // Update the initialize method
  @Override
  public void initialize(URL location, ResourceBundle resources) {
 	 
@@ -57,7 +58,8 @@ public class AddMechanicController extends BaseController implements Initializab
      
  }
 
-  public void setRole(String role) {
+ // Add setRole method
+ public void setRole(String role) {
      this.currentRole = role;
      configureMenuBasedOnRole(lblHome, lblCustomer, lblPayment, lblInventory, 
              lblSalesRep, lblManager, lblViewReport, lblLogout, currentRole);
@@ -68,6 +70,7 @@ public class AddMechanicController extends BaseController implements Initializab
     @FXML
     private void handleSaveButtonAction(ActionEvent event) {
         try {
+            // Validate required fields
             if (firstNameField.getText().isEmpty() || lastNameField.getText().isEmpty() 
                 || phoneNumberField.getText().isEmpty() || specializationField.getText().isEmpty()
                 || experienceYearsField.getText().isEmpty()) {
@@ -75,11 +78,13 @@ public class AddMechanicController extends BaseController implements Initializab
                 return;
             }
 
+            // Validate email format if provided
             if (!emailField.getText().isEmpty() && !emailField.getText().matches(".+@.+\\..+")) {
                 showAlert("Validation Error", "Please enter a valid email address");
                 return;
             }
 
+            // Validate experience years is a number
             int experienceYears;
             try {
                 experienceYears = Integer.parseInt(experienceYearsField.getText());
@@ -88,6 +93,7 @@ public class AddMechanicController extends BaseController implements Initializab
                 return;
             }
 
+            // Create and save mechanic
             Mechanic mechanic = new Mechanic();
             mechanic.setFirstName(firstNameField.getText().trim());
             mechanic.setLastName(lastNameField.getText().trim());
@@ -134,9 +140,10 @@ public class AddMechanicController extends BaseController implements Initializab
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zodiacgroup/view/Mechanic.fxml"));
             Parent root = loader.load();
 
+            // If you need to refresh the mechanic list like in CustomerController
             MechanicController controller = loader.getController();
             controller.refreshMechanicList();
-            controller.setRole(currentRole); 
+            controller.setRole(currentRole); // Ensure role is maintained
             controller.setMainApp(mainApp);
 
             Stage stage = (Stage) cancelButton.getScene().getWindow();

@@ -49,6 +49,7 @@ public class ViewMechanicController extends BaseController implements Initializa
        
        private String currentRole;
 
+    // Update the initialize method
     @Override
     public void initialize(URL location, ResourceBundle resources) {
    	 setCurrentPage("mechanic");
@@ -60,6 +61,7 @@ public class ViewMechanicController extends BaseController implements Initializa
         }
     }
 
+    // Add setRole method
     public void setRole(String role) {
         this.currentRole = role;
         configureMenuBasedOnRole(lblHome, lblCustomer, lblPayment, lblInventory, 
@@ -94,7 +96,7 @@ public class ViewMechanicController extends BaseController implements Initializa
 
             MechanicController controller = loader.getController();
             controller.refreshMechanicList();
-            controller.setRole(currentRole); 
+            controller.setRole(currentRole); // Ensure role is maintained
             controller.setMainApp(mainApp);
 
             Stage stage = (Stage) cancelButton.getScene().getWindow();

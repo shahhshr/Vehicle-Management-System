@@ -48,6 +48,7 @@ public class UpdateMechanicController extends BaseController implements Initiali
    			lblViewReport;
     private String currentRole;
 
+ // Update the initialize method
  @Override
  public void initialize(URL location, ResourceBundle resources) {
 	 setCurrentPage("mechanic");
@@ -59,7 +60,7 @@ public class UpdateMechanicController extends BaseController implements Initiali
      }
  }
 
-
+ // Add setRole method
  public void setRole(String role) {
      this.currentRole = role;
      configureMenuBasedOnRole(lblHome, lblCustomer, lblPayment, lblInventory, 
@@ -87,6 +88,7 @@ public class UpdateMechanicController extends BaseController implements Initiali
 
             Optional<ButtonType> result = confirmAlert.showAndWait();
             if (result.isPresent() && result.get() == ButtonType.OK) {
+                // Changed from static call to instance call
                 Mechanic mechanic = mechanicDAO.getMechanicById(mechanicId);
 
                 if (mechanic != null) {
@@ -139,11 +141,11 @@ public class UpdateMechanicController extends BaseController implements Initiali
 
             Stage stage = (Stage) saveButton.getScene().getWindow();
 
-            stage.setScene(new Scene(root, 1200, 800)); 
+            stage.setScene(new Scene(root, 1200, 800)); // Added consistent window size
             stage.setTitle("Mechanic Management");
 
             MechanicController controller = loader.getController();
-            controller.setRole(currentRole); 
+            controller.setRole(currentRole); // Ensure role is maintained
             controller.setMainApp(mainApp);
             controller.refreshMechanicList();
         } catch (IOException e) {
