@@ -2,64 +2,127 @@ package com.zodiacgroup.model;
 
 import javax.persistence.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Entity
-@Table(name = "appointments")
+@Table(name = "APPOINTMENTS")
 public class Appointment {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id") // The primary key
-    private int id;
+    @Column(name = "APPOINTMENTID")
+    private int appointmentId;
+    
+    @Column(name = "CUSTOMERID", nullable = false)
+    private int customerId;
 
-    @Column(name = "appointment_id", unique = true, nullable = false)
-    private String appointmentId;  
+    @Column(name = "VEHICLEID", nullable = false)
+    private int vehicleId;
 
+    @Column(name = "CUSTOMERNAME", nullable = false)
+    private String customerName;
+
+    @Column(name = "APPOINTMENTDATE", nullable = false)
+    @Temporal(TemporalType.DATE)
+    private Date appointmentDate;
+
+    @Column(name = "SERVICETYPE", nullable = false)
+    private String serviceType;
+
+    @Column(name = "STATUS", nullable = false)
+    private String status;
+    
     @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)  // Foreign key reference to Customer
-    private Customer customer;
-
-    @Column(name = "vehicle_name", nullable = false)
-    private String vehicleName;
+    @JoinColumn(name = "vehicle_id")
+    private Vehicle vehicle;
 
     // Constructors
-    public Appointment() {}
+    public Appointment() {
+    }
 
-    public Appointment(String appointmentId, Customer customer, String vehicleName) {
-        this.appointmentId = appointmentId;
-        this.customer = customer;
-        this.vehicleName = vehicleName;
+    public Appointment(int vehicleId, String customerName, Date appointmentDate, 
+                      String serviceType, String status) {
+        this.vehicleId = vehicleId;
+        this.customerName = customerName;
+        this.appointmentDate = appointmentDate;
+        this.serviceType = serviceType;
+        this.status = status;
     }
 
     // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getAppointmentId() {
+    public int getAppointmentId() {
         return appointmentId;
     }
 
-    public void setAppointmentId(String appointmentId) {
+    public void setAppointmentId(int appointmentId) {
         this.appointmentId = appointmentId;
     }
-
-    public Customer getCustomer() {
-        return customer;
+    
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public String getVehicleName() {
-        return vehicleName;
+    public int getVehicleId() {
+        return vehicleId;
     }
 
-    public void setVehicleName(String vehicleName) {
-        this.vehicleName = vehicleName;
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public Date getAppointmentDate() {
+        return appointmentDate;
+    }
+
+    public void setAppointmentDate(Date appointmentDate) {
+        this.appointmentDate = appointmentDate;
+    }
+
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+                "appointmentId=" + appointmentId +
+                ", vehicleId=" + vehicleId +
+                ", customerName='" + customerName + '\'' +
+                ", appointmentDate=" + appointmentDate +
+                ", serviceType='" + serviceType + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
+    
+    public String getAppointmentDateFormatted() {
+        if (appointmentDate != null) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            return dateFormat.format(appointmentDate);
+        }
+        return "";
     }
 }
