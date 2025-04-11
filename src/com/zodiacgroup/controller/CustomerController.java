@@ -21,6 +21,7 @@ import java.io.IOException;
 import com.zodiacgroup.dao.CustomerDAO;
 import com.zodiacgroup.model.Customer;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -127,8 +128,10 @@ public class CustomerController extends BaseController implements Initializable 
 	}
 
 	private void loadCustomerData() {
-		List<Customer> customers = customerDAO.getAllCustomers();
-		customerTable.getItems().setAll(customers);
+	    new Thread(() -> {
+	        List<Customer> customers = customerDAO.getAllCustomers();
+	        Platform.runLater(() -> customerTable.getItems().setAll(customers));
+	    }).start();
 	}
 
 	@FXML
@@ -300,7 +303,10 @@ public class CustomerController extends BaseController implements Initializable 
 	}
 
 	private void refreshTable() {
-		customerTable.getItems().setAll(customerDAO.getAllCustomers());
+	    new Thread(() -> {
+	        List<Customer> customers = customerDAO.getAllCustomers();
+	        Platform.runLater(() -> customerTable.getItems().setAll(customers));
+	    }).start();
 	}
 
 	@FXML
